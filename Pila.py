@@ -6,13 +6,13 @@ class Nodo:
 class Stack:
     def __init__(self):
         self.head = None
-        self.items = []  # Lista para almacenar los elementos de la pila
+        self.items = []
         
     def push(self, value):
         new_nodo = Nodo(value)
         new_nodo.next = self.head
         self.head = new_nodo
-        self.items.append(value)  # Agregar el valor a la lista
+        self.items.append(value)
 
     def pop(self):
         if self.head is None:
@@ -20,11 +20,11 @@ class Stack:
             return None
         value = self.head.value
         self.head = self.head.next
-        self.items.pop()  # Eliminar el último elemento de la lista
+        self.items.pop()
         return value
 
     def get_items(self):
-        return self.items  # Método para obtener los elementos de la lista
+        return self.items
 
 
 pila = Stack()
@@ -32,6 +32,6 @@ pila.push(1)
 pila.push(2)
 pila.push(3)
 
-print(pila.get_items())  # Imprime [1, 2, 3]
-print(pila.pop())        # Imprime 3
-print(pila.get_items())  # Imprime [1, 2]
+print(pila.get_items())
+print(pila.pop())
+print(pila.get_items())
